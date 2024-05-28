@@ -1,0 +1,44 @@
+@import url(https://db.onlinewebfonts.com/c/e8fafd4bab1ff229bb62067775369b8d?family=Thunderhouse+Pro);
+
+.conteiner-pagina-generos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    
+    @media screen and (min-width: 768px) {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        grid-template-columns:repeat(2, 350px);
+        @media screen and (min-width: 1024px) {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            grid-template-columns:repeat(3, 375px);
+        }
+    }
+    
+}
+
+.item-galeria-generos{
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    @media screen and (min-width: 768px) {
+        width: 350px;
+        height: 350px;
+        @media screen and (min-width: 1024px) {
+            width: 375px;
+            height: 375px;
+        }
+    }
+}
+
+#titulo-pagina-generos{
+    text-align: center;
+    font-family: 'Thunderhouse Pro';
+}

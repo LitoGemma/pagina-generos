@@ -25,6 +25,7 @@
 }
 
 .item-galeria-generos{
+    display: block;
     border-radius: 20px;
     width: 300px;
     height: 300px;
@@ -38,7 +39,37 @@
     }
 }
 
+.item-galeria-generos:hover{
+    opacity: 0.8;
+}
+
 #titulo-pagina-generos{
     text-align: center;
+    font-size: 60px;
     font-family: 'Thunderhouse Pro';
+    text-decoration: none;
 }
+
+.item-galeria{
+    display: grid;
+    position: relative; 
+}
+
+.item-galeria img{
+    grid-column: 1;
+    grid-row: 1/3;
+}
+
+.item-galeria p{
+    background-color: rgba(1, 1, 1, 0.6);
+    padding: 10px;
+    color: white;
+    grid-column: 1;
+    text-align: center;
+    font-family: 'Thunderhouse Pro';
+    position: absolute;
+    bottom: 0;
+    width: 94.5%;
+    font-size: 20px;
+    }
+   

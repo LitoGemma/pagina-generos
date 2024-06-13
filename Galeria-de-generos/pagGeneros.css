@@ -1,13 +1,32 @@
 @import url(https://db.onlinewebfonts.com/c/e8fafd4bab1ff229bb62067775369b8d?family=Thunderhouse+Pro);
 
 .conteiner-pagina-generos{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 150px;
+    grid-template-areas:
+    "titulo-pagina-generos"
+    "galeria-generos"
+    "agenda-generos";
     justify-content: center;
-    align-items: center;
-    gap: 30px;
+    gap:10vh;
+}
+
+#titulo-pagina-generos{
+    grid-area: titulo-pagina-generos;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Thunderhouse Pro';
+    text-decoration: none;
+}
+
+.galeria-generos{
+    grid-area: galeria-generos;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5vh;
     
-    @media screen and (min-width: 768px) {
+    /* @media screen and (min-width: 768px) {
         display: grid;
         justify-content: center;
         align-items: center;
@@ -20,34 +39,27 @@
             gap: 30px;
             grid-template-columns:repeat(3, 375px);
         }
-    }
+    } */
     
 }
 
 .item-galeria-generos{
     display: block;
     border-radius: 20px;
-    width: 300px;
-    height: 300px;
-    @media screen and (min-width: 768px) {
+    width: 120px;
+    height: 120px;
+    /* @media screen and (min-width: 768px) {
         width: 350px;
         height: 350px;
         @media screen and (min-width: 1024px) {
             width: 375px;
             height: 375px;
         }
-    }
+    } */
 }
 
 .item-galeria-generos:hover{
     opacity: 0.8;
-}
-
-#titulo-pagina-generos{
-    text-align: center;
-    font-size: 60px;
-    font-family: 'Thunderhouse Pro';
-    text-decoration: none;
 }
 
 .item-galeria{
@@ -61,15 +73,31 @@
 }
 
 .item-galeria p{
-    background-color: rgba(1, 1, 1, 0.6);
+    background-color: rgba(207, 134, 24, 0.6);
     padding: 10px;
     color: white;
     grid-column: 1;
-    text-align: center;
+    text-align: left;
     font-family: 'Thunderhouse Pro';
     position: absolute;
     bottom: 0;
-    width: 94.5%;
+    width: 90%;
     font-size: 20px;
     }
+
+.agenda-generos{
+    grid-area: agenda-generos;
+    display: grid;
+    grid-template-columns: repeat(5, 2vh);
+    grid-template-rows: repeat(3, 5vh);
+    gap: 30vh;
+    align-items: center;
+    margin-top: 200px;
+    justify-content: center;
+}
    
+.item-agenda{
+    background: black;
+    width: 200px;
+    height: 300px;
+}

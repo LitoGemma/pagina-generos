@@ -87,18 +87,22 @@
 
 .btn-success{
     width: 30vh;
-    height: 10vh;
+    height: 8vh;
     grid-column: 4;
-        
+    border-radius: 50px !important;
 }
     
 .btn-warning{
     width: 30vh;
-    height: 10vh;
+    height: 8vh;
     grid-column: 3;
     grid-row: 1;
-    
+    border-radius: 50px !important;
 }   
+
+.btn{
+    border-radius: 40px;
+}
 
 .agenda-generos{
     grid-area: agenda-generos;
@@ -107,9 +111,9 @@
     grid-template-columns: repeat(3, 1vh);
     grid-template-rows: repeat(3, 30vh);
     gap: 10rem 15rem;
-
+    background-color: rgba(207, 134, 24, 0.6);
     justify-content: center;
-
+    border-radius: 50px !important;
 }
 
    

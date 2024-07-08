@@ -5,15 +5,19 @@
     grid-template-areas:
     "titulo-pagina-generos"
     "galeria-generos"
+    "button-generos"
+    "titulo-agenda-generos"
     "agenda-generos";
     justify-content: center;
-    gap:10vh;
+    gap:2vh;
+    width: 100%;
 }
 
 #titulo-pagina-generos{
     grid-area: titulo-pagina-generos;
     text-align: center;
     font-size: 60px;
+    color: rgb(5, 91, 166);
     font-family: 'Thunderhouse Pro';
     text-decoration: none;
 }
@@ -26,7 +30,7 @@
     gap: 2vh;
     grid-template-columns:repeat(1, 100px);
 
-    @media screen and (max-width: 1250px) {
+    @media screen and (max-width: 1300px) {
         display: grid;
         justify-content: center;
         align-items: center;
@@ -36,12 +40,50 @@
             display: grid;
             justify-content: center;
             align-items: center;
-            gap: 10vh;
+            gap: 8vh;
             grid-template-columns:repeat(3, 50px);
+            @media screen and (max-width: 767px) {
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                gap: 5vh;
+                grid-template-columns:repeat(3, 50px);
+            }
         }
     }
     
 }
+
+.item-galeria p{
+    background-color: rgba(207, 134, 24, 0.6);
+    padding: 10px;
+    color: white;
+    grid-column: 1;
+    text-align: left;
+    font-family: 'Thunderhouse Pro';
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    font-size: 20px;
+
+    @media screen and (max-width: 1300px) {
+        bottom: 0;
+        width: 70%;
+        font-size: 15px;
+        @media screen and (max-width: 1024px) {
+            bottom: 0;
+            width: 180%;
+            font-size: 15px;
+            @media screen and (max-width: 767px) {
+                bottom: 0;
+                width: 120%;
+                font-size: 10px;
+            }
+        }
+    }
+
+    }
+
 
 .item-galeria-generos{
     display: block;
@@ -62,6 +104,21 @@
     opacity: 0.8;
 }
 
+.button-generos{
+    display: grid;
+    grid-template-columns:repeat(5, 250px);
+    gap: 2vh;
+    
+}
+
+.button-calendario{
+    grid-column: 4;
+}
+
+.button-eventos-gratuito{
+    grid-column: 5 !important;
+}
+
 .item-galeria{
     display: grid;
     position: relative; 
@@ -72,48 +129,58 @@
     grid-row: 1/3;
 }
 
-.item-galeria p{
-    background-color: rgba(207, 134, 24, 0.6);
-    padding: 10px;
-    color: white;
-    grid-column: 1;
-    text-align: left;
-    font-family: 'Thunderhouse Pro';
-    position: absolute;
-    bottom: 0;
-    width: 90%;
-    font-size: 20px;
-    }
+
 
 .btn-success{
-    width: 30vh;
-    height: 8vh;
+    width: 25vh;
+    height: 5vh;
     grid-column: 4;
+    background-color: rgb(3, 115, 42) !important;
     border-radius: 50px !important;
 }
     
-.btn-warning{
+/* .btn-warning{
     width: 30vh;
     height: 8vh;
     grid-column: 3;
     grid-row: 1;
     border-radius: 50px !important;
-}   
+}    */
 
 .btn{
     border-radius: 40px;
 }
 
+
+#titulo-agenda-generos{
+    grid-area: titulo-pagina-generos;
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Thunderhouse Pro';
+    text-decoration: none;
+    color: rgb(5, 91, 166);
+}
+
 .agenda-generos{
     grid-area: agenda-generos;
     display: grid;
-    margin-top: 100px;
-    grid-template-columns: repeat(3, 1vh);
-    grid-template-rows: repeat(3, 30vh);
-    gap: 10rem 15rem;
-    background-color: rgba(207, 134, 24, 0.6);
+    grid-template-columns:repeat(4, 100px);
+    padding-top: 5vh;
+    gap: 1vh 15vh;
+    background-color: rgb(242, 160, 7);
     justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
     border-radius: 50px !important;
+    @media screen and (max-width: 2000px) {
+        gap: 1vh 15vh;
+        @media screen and (max-width: 1600px) {
+            grid-template-columns:repeat(5, 100px);
+            gap: 2vh 10vh !important;
+            
+        }
+    }
 }
 
    
@@ -122,8 +189,16 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
-    width: 30vh;
-    height: 50vh;
-    /* grid-row: 2/4; */
+    width: 15vh !important;
+    height: 25vh !important;
+    border-radius: 90px;
+    @media screen and (max-width: 2000px) {
+        width: 15vh !important;
+        height: 25vh !important;
+        @media screen and (max-width: 1600px) {
+            width: 12vh !important;
+            height: 20vh !important;
+        }
+    }
 }
 
